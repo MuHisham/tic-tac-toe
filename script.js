@@ -2,7 +2,7 @@
 function Cell() {
     let value = '';
 
-    const changeValue = (char) => value = char;
+    const changeValue = (char) => {if (value === '') value = char};
     const getValue = () => value;
 
     return { value, changeValue, getValue };
@@ -75,8 +75,8 @@ function Player(name, marker) {
     return { name, marker };
 }
 
-const pOne = Player(prompt("Enter Player One name"), "X");
-const pTwo = Player(prompt("Enter Player One name"), "O");
+// const pOne = Player(prompt("Enter Player One name"), "X");
+// const pTwo = Player(prompt("Enter Player One name"), "O");
 
 // GameController Object
 const GameController = (function (playerOne, playerTwo) {
@@ -111,9 +111,13 @@ function Game() {
             gameOver = true;
             console.log(`${GameController.getActivePlayer().name} won!`);
         }
+        else if (currentBoard.flat().filter(elem => elem != '').length === 9) {
+            gameOver = true;
+            console.log("Its a draw!")
+        }
         GameController.switchPlayer();
     }
 }
 
 
-Game();
+// Game();
