@@ -1,5 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Teko&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family: "Teko", sans-serif;
+    font-size: 1.75rem;
+    color: #4C5270;
+}
+
+.first {
+    color: #F652A0;
+}
+.second {
+    color: #36EEE0;
+}
+.third {
+    color: #4C5270;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: "Teko", sans-serif;
+}
+
+form {
+    height: 60vh;
+    width: 80vw; 
+    max-width: 600px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.playerOne, .playerTwo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+label {
+    font-size: 2rem;
+    margin-bottom: 4px;
+    background-color: black;
+    background-image: linear-gradient(45deg, #4C5270, #F652A0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+input {
+    appearance: none;
+    height: 2rem;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 0px 5px;
+}
+
+.play {
+    margin: 20px auto 0px;
+    background-color: red;
+    width: 40%;
+    min-width: 100px;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(45deg, #F652A0, #36EEE0);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    
+}
+
+input:hover {
+    transform: translate(3%, 5%);
+}
+
+.play:hover {
+    animation: animatebutton 500ms linear infinite;
+}
+
+@keyframes animatebutton {
+    0% {
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(0deg);
+        transform: scale(1.2);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
 }

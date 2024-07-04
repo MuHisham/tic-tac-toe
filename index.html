@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index-styles.css">
     <script src="script.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <header>
+        <h1><span class="first">TIC</span> . <span class="second">TAC</span> . <span class="third">TOE</span></h1>
+    </header>
+    <div class="container">
+        <form>
+            <div class="playerOne">
+                <label for="nameOne">Enter first player</label>
+                <input type="text" name="nameOne" id="nameOne">
+            </div>
     
+            <div class="playerTwo">
+                <label for="nameTwo">Enter second player</label>
+                <input type="text" name="nameTwo" id="nameTwo">
+            </div>
+    
+            <!-- To move to another page using js -->
+            <!-- window.location.replace("game.html"); -->
+            <div class="play">Play</div>
+        </form>
+    </div>
 </body>
 </html>
