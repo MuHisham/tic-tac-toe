@@ -35,7 +35,64 @@ p {
     height: 30vw;
     min-width: 300px;
     min-height: 300px;
+    position: relative;
 }
+
+.line {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.c-1, .c-2, .c-3 {
+    top: calc(20%/2);
+    height: 80%;
+    width: 8px;
+    transform: translateX(-3px);
+}
+
+.c-1 {
+    left: calc((100%/3)/2);
+}
+.c-2 {
+    left: calc(((100%/3)/2)*3);
+}
+.c-3 {
+    left: calc(((100%/3)/2)*5);
+}
+
+.r-1, .r-2, .r-3 {
+    left: calc(20%/2);
+    width: 80%;
+    height: 8px;
+    transform: translateY(-3px);
+}
+
+.r-1 {
+    top: calc((100%/3)/2);
+}
+.r-2 {
+    top: calc(((100%/3)/2)*3);
+}
+.r-3 {
+    top: calc(((100%/3)/2)*5);
+}
+
+.d-1, .d-2 {
+    top: 2%;
+    left: 49%;
+    height: 97%;
+    width: 8px;
+}
+
+.d-1 {
+    transform: rotate(315deg);
+}
+.d-2 {
+    transform: rotate(225deg);
+}
+
 
 .box {
     background-color: #fff;
@@ -48,12 +105,6 @@ p {
     border-bottom: 3px solid var(--cornflower);   
 }
 
-.c-1-1 {
-    color: var(--cyan);
-}
-.c-1-2 {
-    color: var(--hot-pink);
-}
 
 .modal {
     display: none;
